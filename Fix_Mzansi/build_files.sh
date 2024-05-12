@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # build_files.sh
-python pip install -r requirements.txt
+pip install -r requirements.txt
 
 # make migrations 
 python manage.py migrate 
