@@ -14,12 +14,12 @@
       }
     }
   ],
-  "rewrites": [
-    { 
-      "source": "/(.*)",
-      "destination": "/"
-     }
-   ],
+  // "rewrites": [
+  //   { 
+  //     "source": "/(.*)",
+  //     "destination": "/"
+  //    }
+  //  ],
   "routes": [
     {
       "src": "/static/(.*)",
