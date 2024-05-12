@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "Fix_Mzansi/Fix_Mzansi/wsgi.py",
+      "src": "Fix_Mzansi/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     },
@@ -21,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "Fix_Mzansi/Fix_Mzansi/wsgi.py"
+      "dest": "Fix_Mzansi/wsgi.py"
     }
   ]
 }
