@@ -1,0 +1,7 @@
+/*---------------------------------------- Page Content(home,profile etc) Section Div --------------------------------------------*/
+#page_content {
+  height: 100%;
+  width: 80%; /* 80% width 20% is taken by sidebar */
+  align-self: end;
+  flex-grow: 1; /* Take up the remaining space */
+}

@@ -1,0 +1,189 @@
+/*-------------------------------------------- For APP 'log_issues/templates/post_issue.css' --------------------------------------*/
+
+/*-------------- Div with page content ----------------*/
+#log_issue_content_div_id {
+    height: 100%;
+    width: 100%;
+/*    padding: 5px 5px;*/
+    padding-right: 3px;
+    overflow-y: auto;
+}
+
+#form_id {
+    height: 95%;
+/*    overflow: auto;*/
+}
+/*-------------- End Div with page content -----------*/
+
+
+
+/*---------------------- Form ------------------------*/
+
+/*----- Form Elements Grouping Div ----------*/
+#issue_title_div_id,
+#issue_description_div_id,
+#media_upload_div_id,
+#location_details_div_id,
+#category_div_id,
+#category_btn_div,
+#id_file,
+#submit_btn_div_id {
+    padding: 7px 7px;
+    margin: 5px;
+}
+
+#issue_title_div_id {
+    height: 60px;
+}
+
+#issue_description_div_id {
+    height: 100px;
+}
+
+#category_div_id {
+    width: 965px;
+}
+
+#location_details_div_id {
+    padding: 0px 0px;
+}
+#col_div_1,
+#col_div_2 {
+    width: 50%;
+}
+/*----- End Form Elements Grouping Div ------*/
+
+
+/*----- Form 'Input Label' Element ----------*/
+#log_issue_content_div_id form p {
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 0px;
+}
+
+/*----- End Form 'Input Label' Element ------*/
+
+
+/*----- Form Titles SVG's ----------------*/
+#issue_title_svg,
+#issue_description_svg,
+#media_upload_svg,
+#category_div_svg_id,
+#location_div_svg_id {
+    display: inline-block;
+    margin-left: 5px;
+}
+/*----- End Form Titles SVG's ------------*/
+
+
+/*----- Form Input boxes  ----------------*/
+#id_issue_title,
+#id_issue_description {
+    height: 50px;
+    border: 0px 0px;
+    border-radius: 5px;
+}
+
+#id_issue_description {
+    height: 70px;
+    width: 800px;
+    display: inline-block;
+}
+
+#id_issue_title {
+    display: inline-block;
+    width: 800px;
+    margin-left: 63px;
+}
+
+#id_file {
+/*    display: inline-block;*/
+/*    width: 450px;*/
+}
+
+#media_upload_btn_div_id {
+    display: flex;
+    width: 1000px;
+    height: 39px;
+/*    align-content: ver;*/
+}
+
+#location_details_inputs_div_id {
+    width: 1000px;
+}
+
+#autofield_inputs_div_id {
+    display: flex;
+    height: 125px;
+}
+
+#autofield_inputs_div_id_2 {
+    display: flex;
+}
+
+#id_town_name,
+#id_street_name,
+#id_city_name,
+#id_suburb_name,
+#id_municipality,
+#id_state_name,
+#id_address_type,
+#id_latitude,
+#id_longitude {
+    display: inline-block;
+    width: 250px;
+}
+
+#id_town_name {
+    margin-left: 13px;
+}
+
+#id_street_name {
+    margin-left: 10px;
+}
+
+#id_city_name {
+    margin-left: 24px;
+}
+
+#id_municipality {
+    margin-left: 6px;
+}
+
+#id_state_name {
+    margin-left: 32px;
+}
+
+#id_latitude {
+/*    margin-left: 36px;*/
+}
+
+#id_longitude {
+/*    margin-left: 24px;*/
+}
+
+/*----- End Form Input boxes  ----------------*/
+
+
+/*----- PopUp Dialog Div -----------------*/
+.modal-dialog {
+    max-width: 90%;
+}
+/*----- PopUp Dialog Div -----------------*/
+
+.disabled-input,
+#id_town_name,
+#id_street_name,
+#id_city_name,
+#id_suburb_name,
+#id_municipality,
+#id_state_name,
+#id_address_type,
+#id_latitude,
+#id_longitude {
+  pointer-events: none;
+  background-color: #f4f4f4; /* Optional: Change background color to visually indicate it's disabled */
+  /* Optionally, you can add styles to make it visually distinct from enabled inputs */
+  color: #999; /* Optional: Change text color */
+  border-color: #ccc; /* Optional: Change border color */
+}

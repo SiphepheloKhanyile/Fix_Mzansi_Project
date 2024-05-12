@@ -1,0 +1,66 @@
+@media screen and (min-width: 768px) and (max-width: 1010px){
+    #update_form_id {
+            height: 850px;
+        }
+}
+
+@media screen and (min-width: 1010px) and (max-width: 1199px) {
+    #update_form_id {
+            height: 790px;
+        }
+}
+
+@media screen and (min-width: 1200px) {
+    #update_form_id {
+            height: 680px;
+        }
+}
+
+@media screen and (max-width: 767px) {
+    #update_form_id {
+        height: 1055px;
+    }
+
+    #update_form_id p,
+    #id_file {
+        font-size: 14px;
+    }
+
+    #update_form_id svg{
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Style for the media file input wrapper */
+.file-input-wrapper {
+    display: block;
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 10px; /* Padding around the input */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+#media_upload_btn_div_id_2 {
+    display: flex;
+    width: 98%;
+}
+
+
+@media screen and (min-width: 1200px){
+    #media_upload_btn_div_id_2{
+        width: 947px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    #media_upload_btn_div_id_2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #media_upload_btn_div_id_2 {
+        width: 100%;
+    }
+}

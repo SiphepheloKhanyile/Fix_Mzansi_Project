@@ -1,0 +1,7 @@
+@media screen and (max-width: 575px) {
+    #top_svg_id,
+    #bottom_svg_id {
+        width: 35px;
+        height: 35px;
+    }
+}

@@ -1,0 +1,45 @@
+<!-- Extending from base.html -->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+<!-- title block -->
+{% block title %}<title>Post Issue</title>{% endblock title %}
+<!-- end title block -->
+
+<!-- Page Content Block -->
+{% block content %}
+    <div class="border rounded p-2 d-flex justify-content-center" style="width: 100%; height:100%">
+        <div id="issues_map" style="height: 100%; width: 100%;"></div>
+    </div>
+{% endblock content %}
+<!-- End Page Content Block -->
+
+<!-- Page jquery Block -->
+{% block page_jquery %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the map
+    var map = L.map('issues_map').setView([-26.11976158751007, 28.158826991453715], 5.5);
+
+    // Add the base map layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Example data: Replace this with your actual issue data
+    var issues_var = [
+        {% for issue in issues %}
+            {latitude: {{ issue.latitude }}, longitude: {{ issue.longitude }}, title: '{{ issue.issue_title }}'},
+        {% endfor %}
+    ];
+
+    // Add a marker for each issue
+    issues_var.forEach(function(issue) {
+        L.marker([issue.latitude, issue.longitude]).addTo(map)
+            .bindPopup(issue.title);
+            // .openPopup();
+    });
+});
+</script>
+{% endblock page_jquery %}
+<!-- Page jquery Block -->

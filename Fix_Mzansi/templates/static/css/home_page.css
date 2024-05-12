@@ -1,0 +1,39 @@
+/*------- Main Content Div -----------*/
+#content_container_div_id {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/*------- End Main Content Div --------*/
+
+
+/*------- Card Content Div -----------*/
+@media screen and (min-width: 768px) {
+    #card_content_div_id img {
+        height: 250px;
+    /*    width: 100%;*/
+    }
+}
+/*------- End Card Content Div --------*/
+
+#search_form_id {
+    width: 70%;
+}
+
+@media screen and (max-width: 575px) {
+    #search_and_Date_div_id {
+        display: flex;
+        justify-content: center;
+    }
+
+    #search_form_id {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #date_div_id {
+        margin-left: 20px;
+    }
+}

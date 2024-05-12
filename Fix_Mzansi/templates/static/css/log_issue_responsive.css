@@ -1,0 +1,371 @@
+/*-------------------------------------------- For APP 'log_issues/templates/post_issue.css' --------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 1010px){
+    #form_id {
+            height: 915px;
+        }
+}
+
+@media screen and (min-width: 1010px) and (max-width: 1199px) {
+    #form_id {
+            height: 855px;
+        }
+}
+
+@media screen and (min-width: 1200px) {
+    #form_id {
+            height: 740px;
+        }
+}
+
+/*---- XL and Above Screens ---*/
+@media screen and (min-width: 1200px){
+    #id_issue_title,
+    #id_issue_description {
+        width: 750px;
+    }
+
+    #media_upload_btn_div_id{
+        width: 947px;
+    }
+
+    #autofield_inputs_div_id {
+        width: 952px;
+        height: 160px;
+    }
+
+    #id_town_name,
+    #id_street_name,
+    #id_city_name,
+    #id_suburb_name,
+    #id_municipality,
+    #id_state_name,
+    #id_address_type,
+    #id_latitude,
+    #id_longitude {
+        margin-top: 5px;
+        margin-bottom: 5px ;
+    }
+
+    #location_details_div_id {
+        height: 310px;
+    }
+
+    #location_svg_p_div_id {
+        display: inline-block;
+        height: 100%;
+        width: 832px;
+        height: 40px;
+
+    }
+
+    #location_openmap_btn_div_id {
+        display: inline-block;
+/*        width: 150px;*/
+        height: 100%;
+    }
+
+    #openmap_btn_id {
+/*        width: 45px;*/
+        height: 35px;
+    }
+
+    #location_div_par_svg_div_id {
+        height: 43px;
+        margin-bottom: 5px;
+        margin-top: 7px;
+    }
+
+    #autofield_inputs_div_id {
+        margin-bottom: 5px;
+    }
+
+    #autofield_inputs_div_id_2 {
+        width: 952px;
+        margin-bottom: 5px;
+    }
+}
+
+/*---- End XL and Above Screens ---*/
+
+
+/*---- Medium and Large Screens ---*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+
+    #id_issue_title,
+    #id_issue_description {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    #id_issue_title {
+        margin-left: 0px;
+    }
+
+    #issue_title_div_id {
+        height: 100px;
+    }
+
+    #issue_description_div_id {
+        height: 110px;
+    }
+
+    #category_div_id {
+        width: 100%;
+    }
+
+    #category_btn_div {
+        margin-bottom: 0px;
+    }
+    
+    #media_upload_btn_div_id {
+        width: 100%;
+    }
+
+    #location_div_par_svg_div_id {
+        height: 43px;
+        margin-bottom: 5px;
+        margin-top: 7px;
+        display: flex;
+        width: 100%;
+    }
+
+    #location_details_div_id {
+        height: 380px;
+    }
+
+    #location_svg_p_div_id {
+        display: inline-block;
+        height: 100%;
+/*        width: 832px;*/
+        width: 70%;
+        height: 40px;
+
+    }
+
+    #location_openmap_btn_div_id {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #openmap_btn_id {
+        width: 45;
+        height: 35px;
+        margin-right: 14px;
+    }
+
+
+    #id_town_name,
+    #id_street_name,
+    #id_city_name,
+    #id_suburb_name,
+    #id_municipality,
+    #id_state_name,
+    #id_address_type,
+    #id_latitude,
+    #id_longitude {
+        margin-top: 5px;
+        margin-bottom: 5px ;
+    }
+
+    #autofield_inputs_div_id {
+        width: 98%;
+        height: 160px;
+        margin-bottom: 5px;
+    }
+
+    #autofield_inputs_div_id_2 {
+        display: block;
+        width: 98%;
+        margin-bottom: 5px;
+    }
+
+    #id_latitude {
+        margin-left: 35px;
+    }
+    #id_longitude {
+        margin-left: 23px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1010px){
+
+    #id_suburb_name {
+        margin-left: 8px;
+    }
+
+    #autofield_inputs_div_id {
+        height: 230px;
+    }
+    #id_city_name,
+    #id_state_name {
+        display: block;
+        margin-left: 5px;
+    }
+
+    #location_details_div_id {
+        height: 440px;
+    }
+}
+/*---- End Medium and Large Screens ---*/
+
+
+/*---- Small Screens -----------------*/
+@media screen and (max-width: 767px) {
+    #id_issue_title,
+    #id_issue_description {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    #id_issue_title {
+        margin-left: 0px;
+    }
+
+    #issue_title_div_id {
+        height: 100px;
+    }
+
+    #issue_description_div_id {
+        height: 110px;
+    }
+
+    #category_div_id {
+        width: 100%;
+    }
+
+    #category_btn_div {
+        margin-bottom: 0px;
+    }
+
+    #media_upload_btn_div_id {
+        width: 100%;
+    }
+
+    #location_div_par_svg_div_id {
+        height: 43px;
+        margin-bottom: 5px;
+        margin-top: 7px;
+        display: flex;
+        width: 100%;
+    }
+
+    #location_details_div_id {
+        height: 380px;
+    }
+
+    #location_svg_p_div_id {
+        display: inline-block;
+        height: 100%;
+        width: 70%;
+        height: 40px;
+
+    }
+
+    #location_openmap_btn_div_id {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #openmap_btn_id {
+        width: 45;
+        height: 35px;
+        margin-right: 14px;
+    }
+
+    #autofield_inputs_div_id {
+        width: 98%;
+        height: 200px;
+        margin-bottom: 5px;
+    }
+
+    #autofield_inputs_div_id_2 {
+        display: block;
+        width: 98%;
+        margin-bottom: 5px;
+    }
+
+}
+
+/* Extra small screens */
+@media screen and (max-width: 767px) {
+    #form_id {
+        height: 1133px;
+    }
+
+    #form_id p,
+    #id_file {
+        font-size: 14px;
+    }
+
+    #form_id svg{
+        width: 14px;
+        height: 14px;
+    }
+
+    #location_details_div_id {
+        height: 660px;
+    }
+
+    #openmap_btn_id {
+        height: 30px;
+        padding: 0px;
+        padding-left: 2px;
+        padding-bottom: 15px;
+    }
+
+    #autofield_inputs_div_id {
+        height: 400px;
+        display: block;
+    }
+
+    #col_div_1 div,
+    #col_div_2 div {
+        display: block;
+        height: 65px;
+        width: 100%;
+    }
+
+    #col_div_1,
+    #col_div_2 {
+        display: block;
+        width: 100%;
+    }
+
+    #id_street_name,
+    #id_town_name,
+    #id_city_name,
+    #id_state_name,
+    #id_suburb_name,
+    #id_municipality {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    #autofield_inputs_div_id_2 {
+        display: block;
+    }
+
+    #autofield_inputs_div_id_2 div p,
+    #autofield_inputs_div_id_2 div input{
+        display: block;
+    }
+
+    #autofield_inputs_div_id_2 div input
+    {
+        width: 90%;
+    }
+
+    #autofield_inputs_div_id_2 div {
+         margin-top: 6px;
+         width: 100%;
+    }
+
+    #submit_btn_div_id button {
+        font-size: 14px;
+    }
+}
