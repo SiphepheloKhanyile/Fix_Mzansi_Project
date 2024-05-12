@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import dj_database_url
 
 load_dotenv()
 
@@ -28,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') == 'True'
 
-ALLOWED_HOSTS = ["*"]  # My routers IP to access site on mobile
+ALLOWED_HOSTS = [".vercel.app", ".now.sh", "localhost", "127.0.0.1", "0.0.0.0"]
 
 
 # Application definition
@@ -93,19 +94,23 @@ if os.getenv('DEBUG') == 'True':
         }
     }
 else:
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': 'django_cockroachdb',
+    #         'NAME': os.environ.get("DB_NAME"),
+    #         'USER': os.environ.get("DB_USER"),
+    #         'PASSWORD': os.environ.get("DB_PASSWORD"),
+    #         'HOST': os.environ.get("DB_HOST"),
+    #         'PORT': os.environ.get("DB_PORT"),
+    #         'OPTIONS': {
+    #             'sslmode': 'verify-full'
+    #         },
+    #     },
+    # }
     DATABASES = {
-        'default': {
-            'ENGINE': 'django_cockroachdb',
-            'NAME': os.environ.get("DB_NAME"),
-            'USER': os.environ.get("DB_USER"),
-            'PASSWORD': os.environ.get("DB_PASSWORD"),
-            'HOST': os.environ.get("DB_HOST"),
-            'PORT': os.environ.get("DB_PORT"),
-            'OPTIONS': {
-                'sslmode': 'disable'
-            },
-        },
-    }
+        'default': dj_database_url.config(
+            default=os.environ['DATABASE_URL'],
+            engine='django_cockroachdb')}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -138,6 +143,11 @@ USE_I18N = True
 USE_TZ = True
 
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
@@ -148,15 +158,10 @@ else:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles_build',
                                      'templates/static')]
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slas
 MEDIA_URL = '/media/'
+
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
