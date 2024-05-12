@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'Fix_Mzansi.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-if os.getenv('DEBUG'):
+if os.getenv('DEBUG') == 'True':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -102,7 +102,7 @@ else:
             'HOST': os.environ.get("DB_HOST"),
             'PORT': os.environ.get("DB_PORT"),
             'OPTIONS': {
-                'sslmode': 'verify-full'
+                'sslmode': 'disable'
             },
         },
     }
