@@ -23,5 +23,11 @@
       "src": "/(.*)",
       "dest": "Fix_Mzansi/wsgi.py"
     }
-  ]
+  ],
+  "rewrites": [
+    { 
+      "source": "/(.*)",
+      "destination": "/"
+     }
+   ]
 }
