@@ -20,8 +20,11 @@
       "dest": "/static/$1"
     },
     {
-      "src": "/",
+      "src": "/(.*)",
       "dest": "Fix_Mzansi/wsgi.py"
     }
-  ]
+  ],
+  "rewrites": [
+        {"src": "/(.*)", "dest": "/"}
+    ]
 }
