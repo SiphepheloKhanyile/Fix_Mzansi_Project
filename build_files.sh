@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # build_files.sh
-pip install -r requirements.txt
+pythonp3.9 pip install -r requirements.txt
 
 sudo apt install curl -y
 
