@@ -14,12 +14,6 @@
       }
     }
   ],
-  "rewrites": [
-    { 
-      "source": "/(.*)",
-      "destination": "/"
-     }
-   ],
   "routes": [
     {
       "src": "/static/(.*)",
@@ -29,5 +23,5 @@
       "src": "/(.*)",
       "dest": "Fix_Mzansi/Fix_Mzansi/wsgi.py"
     }
-  ],
+  ]
 }
