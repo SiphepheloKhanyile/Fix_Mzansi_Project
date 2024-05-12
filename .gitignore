@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+Maps
+Fix_Mzansi/media/uploads/
+README_2.md
+
 # C extensions
 *.so
 
