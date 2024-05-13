@@ -28,9 +28,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.getenv('DEBUG') == 'True'
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app", ".now.sh", "localhost", "127.0.0.1", "0.0.0.0"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"]
 
 
 # Application definition
@@ -98,11 +98,14 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.environ.get("POSTGRES_DATABASE"),
-            'USER': os.environ.get("POSTGRES_USER"),
-            'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
-            'HOST': os.environ.get("POSTGRES_HOST"),
-            'PORT': os.environ.get("POSTGRES_PORT"),
+            'NAME': os.environ.get("DB_NAME"),
+            'USER': os.environ.get("DB_USER"),
+            'PASSWORD': os.environ.get("DB_PASSWORD"),
+            'HOST': os.environ.get("DB_HOST"),
+            'PORT': os.environ.get("DB_PORT"),
+            'OPTIONS': {
+                'sslmode': 'require'
+            },
         },
     }
     # DATABASES = {
@@ -150,11 +153,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-if os.environ.get('DEBUG') == 'True':
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates/static')]
-else:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles_build',
-                                     'templates/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates/static')]
 
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
