@@ -30,7 +30,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # DEBUG = os.getenv('DEBUG') == 'True'
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"]
+ALLOWED_HOSTS = [".alkebulan.tech",
+                 "localhost", "127.0.0.1", "0.0.0.0"]
 
 
 # Application definition
@@ -97,14 +98,14 @@ if os.getenv('DEBUG') == 'True':
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django_cockroachdb',
             'NAME': os.environ.get("DB_NAME"),
             'USER': os.environ.get("DB_USER"),
             'PASSWORD': os.environ.get("DB_PASSWORD"),
             'HOST': os.environ.get("DB_HOST"),
             'PORT': os.environ.get("DB_PORT"),
             'OPTIONS': {
-                'sslmode': 'require'
+                'sslmode': 'verify-full'
             },
         },
     }
