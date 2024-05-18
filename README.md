@@ -4,6 +4,14 @@
 
 The Fix Mzansi Project aims to provide a platform for citizens to report and address various issues within their communities, such as potholes, damaged infrastructure, and environmental concerns. By leveraging technology and community collaboration, the project strives to facilitate the process of identifying, documenting, and resolving these issues effectively. Visit our deployed site [here](https://www.fixmzansi.alkebulan.tech) and read final project blog article [here](https://www.linkedin.com/pulse/fixmzansi-empowering-communities-through-technology-khanyile-ztmsf) for more insights. Connect with me on [LinkedIn](https://www.linkedin.com/in/siphephelokhanyile).
 
+
+### Desktop View
+![Desktop Screenshot](https://github.com/SiphepheloKhanyile/Fix_Mzansi_Project/blob/main/FixMzansi_Screenshot_Desktop.png)
+
+
+### Mobile View
+![Mobile Screenshot](https://github.com/SiphepheloKhanyile/Fix_Mzansi_Project/blob/main/FixMzansi_Screenshot_Mobile.png)
+
 ## Features
 
 - **Issue Reporting**: Users can submit reports detailing the nature and location of community issues.
