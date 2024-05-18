@@ -20,7 +20,7 @@ def log_issue_view(request):
 
         if log_issue_form.is_valid() and media_form.is_valid():
             log_issue = log_issue_form.save(commit=False)
-            log_issue.posted_by = request.user  # Assuming the user is logged in  # noqa: E501
+            log_issue.posted_by = request.user
             log_issue.save()
 
             media = media_form.save(commit=False)
@@ -48,7 +48,6 @@ def update_issue(request, post_id):
     Update Issue View
     """
     issue = get_object_or_404(LogIssue, id=post_id)
-    # media = get_object_or_404(Media, file=issue.file)
     media_instance, created = Media.objects.get_or_create(log_issue=issue)
     if request.method == 'POST':
         if 'profile_form_button' in request.POST:
